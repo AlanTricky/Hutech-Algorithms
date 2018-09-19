@@ -24,7 +24,7 @@ void random(int arr[],int n){
 
 void outputArray(int arr[],int n){
 	
-	printf("Array random is: \n");
+	printf("\nArray random is: \n");
 	for(int i=0;i<n;i++){
 		printf("%10d",arr[i]);
 	}
@@ -58,6 +58,22 @@ void quickSort(int arr[],int low,int high){
 	}
 }
 
+
+int shellSort(int arr[],int n){
+	for(int gap=n/2; gap>0 ; gap/=2){
+		for(int i=gap;i<n;i++){
+			int temp = arr[i];
+			int j;
+			for(j=i;j>=gap && arr[j-gap]>temp;j-=gap){
+				arr[j] = arr[j-gap];
+			}
+		arr[j] = temp;	
+		}
+	}
+	return 0;
+}
+
+
 int main(){
 	int n;
 	inputN(n);
@@ -69,8 +85,7 @@ int main(){
 	random(arr,n);
 	outputArray(arr,n);
 	
-	quickSort(arr,0,n-1);
-	printf("\n");
+	shellSort(arr,n);
 	outputArray(arr,n);
 	
 	return 0;
