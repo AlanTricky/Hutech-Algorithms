@@ -63,8 +63,8 @@ void selectionSort(int a[],int n){
 				Swap(a[j],a[i]);
 			}
 		}
+		a[i] = min;
 	}
-	outputArray(a,n);	
 }
 
 void insertionSort(int a[],int n){
@@ -107,9 +107,8 @@ int main(){
 	inputArray(a,n);
 	outputArray(a,n);
 	
-	
-	quickSort(a,0,n-1);
-	outputArray(a,n);
+	printf("\\\\\\\\\\\\selecton");
+	insertionSort(a,n);
 	
 	
 	/*int chon;
