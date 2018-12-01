@@ -54,16 +54,15 @@ void interchangeSort(int a[],int n){
 	outputArray(a,n);
 }
 void selectionSort(int a[],int n){
-	int min;
+	int vtmin;
 	printf("\nSelection Sort: ");
 	for(int i=0;i<n;i++){
-		min = a[i];
+		vtmin = i;
 		for(int j=i+1;j<n;j++){
-			if(a[j] < a[i]){
-				Swap(a[j],a[i]);
-			}
+			if(a[j] < a[vtmin])
+				vtmin = j;
 		}
-		a[i] = min;
+		Swap(a[vtmin],a[i]);
 	}
 }
 

@@ -56,7 +56,7 @@ int binarySearch(int a[],int n,int x){
 	int mid;
 	mid = (left + right)/2;
 	
-	while(left < right){
+	while(left <= right){
 		if (a[mid] == x){
 			return mid + 1;
 		}
